@@ -6,7 +6,7 @@
     <title>MirrorChess - a chess board simulator that isn't upside down</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0; background:black">
-    <canvas id="unity-canvas" style="height: 99vh; width: 120vh; background: #231F20"></canvas>
+    <canvas id="unity-canvas" style="height: 100vh; width: 120vh; background: #231F20"></canvas>
 
     <script src="Build/mirrorchess.loader.js"></script>
     <script>
@@ -23,6 +23,8 @@
         canvas.style.position = "fixed";
 
         document.body.style.textAlign = "left";
+      
+        !location.hash && setTimeout(function() { window.scrollTo(0, 1); }, 1000);
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
