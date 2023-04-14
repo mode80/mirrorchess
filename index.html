@@ -24,8 +24,8 @@
 
         document.body.style.textAlign = "left";
       
-        !location.hash && setTimeout(function() { window.scrollTo(0, 1); }, 1000);
       }
+      setTimeout(function() { window.scrollTo(0, 2); }, 1000); // hide address bar on mobile devices
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/mirrorchess.data",
